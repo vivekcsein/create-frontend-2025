@@ -1,14 +1,18 @@
 "use client";
 import React from "react";
+import { useHamburgerMenu } from "@/components/providers/HamburgerProvider";
 
 import {
   HamburgerMenu,
   HamburgerLine,
 } from "@/components/ui/styled-components/styled-navbar";
-import { useHamburgerMenu } from "@/components/providers/HamburgerProvider";
 
-const Navbar_hamburger = () => {
-  const { isOpen, toggleMenu } = useHamburgerMenu();
+interface Navbar_hamburgerProps {
+  menuKey: string;
+}
+
+const Navbar_hamburger = ({ menuKey }: Navbar_hamburgerProps) => {
+  const { isOpen, toggleMenu } = useHamburgerMenu(menuKey);
   return (
     <HamburgerMenu onClick={toggleMenu} aria-label="Toggle menu">
       <HamburgerLine

@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar_link from "./Navbar_link";
-import { extendedNavlink } from "@/types/app";
+import Navbar_link from "../Navbar_link";
+import { ExtendedNavLink } from "@/types/app";
 
 interface Navbar_desktopProps {
-  navbarlinks: Array<extendedNavlink>;
+  navbarlinks: Array<ExtendedNavLink>;
   isAuthenticated: boolean;
 }
 

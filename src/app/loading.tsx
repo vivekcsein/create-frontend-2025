@@ -1,7 +1,8 @@
 "use client";
+import Loader from "@/components/layouts/Loader";
 
 const Loading = () => {
-  return <h3>Loading...</h3>;
+  return <Loader />;
 };
 
 export default Loading;

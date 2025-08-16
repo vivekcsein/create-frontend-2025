@@ -2,7 +2,7 @@
   "name": "create-frontend-2025",
   "author": "@vivekcsein",
   "description": "A frontend template for 2025 using framer motion styled components and zustand",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -12,12 +12,16 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "dependencies": {
+    "clsx": "^2.1.1",
     "framer-motion": "^12.23.12",
     "lucide-react": "^0.536.0",
     "next": "15.4.6",
+    "next-themes": "^0.4.6",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "styled-components": "^6.1.19",
+    "swiper": "^11.2.10",
+    "zod": "^4.0.17",
     "zustand": "^5.0.7"
   },
   "devDependencies": {

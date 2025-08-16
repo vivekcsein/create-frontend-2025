@@ -2,7 +2,7 @@
 import React from "react";
 import { icons } from "lucide-react";
 
-const Lucid_svg = ({
+const Lucid_Icon = ({
   iconName,
   ...props
 }: { iconName: string | undefined } & React.SVGProps<SVGSVGElement>) => {
@@ -18,4 +18,4 @@ const Lucid_svg = ({
   return null; // Or a fallback icon/message
 };
 
-export default Lucid_svg;
+export default Lucid_Icon;

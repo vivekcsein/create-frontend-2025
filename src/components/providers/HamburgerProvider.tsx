@@ -1,4 +1,3 @@
-// hooks/use-hamburger-context.tsx
 "use client";
 import {
   createContext,
@@ -8,11 +7,15 @@ import {
   ReactNode,
 } from "react";
 
+interface HamburgerMenuState {
+  [key: string]: boolean;
+}
+
 interface HamburgerMenuContextType {
-  isOpen: boolean;
-  toggleMenu: () => void;
-  openMenu: () => void;
-  closeMenu: () => void;
+  getIsOpen: (key: string) => boolean;
+  toggleMenu: (key: string) => void;
+  openMenu: (key: string) => void;
+  closeMenu: (key: string) => void;
 }
 
 const HamburgerMenuContext = createContext<
@@ -24,26 +27,49 @@ export const HamburgerMenuProvider = ({
 }: {
   children: ReactNode;
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [menuStates, setMenuStates] = useState<HamburgerMenuState>({});
 
-  const toggleMenu = useCallback(() => setIsOpen((prev) => !prev), []);
-  const openMenu = useCallback(() => setIsOpen(true), []);
-  const closeMenu = useCallback(() => setIsOpen(false), []);
+  const getIsOpen = useCallback(
+    (key: string) => {
+      return menuStates[key] ?? false;
+    },
+    [menuStates]
+  );
+
+  const toggleMenu = useCallback((key: string) => {
+    setMenuStates((prev) => ({ ...prev, [key]: !prev[key] }));
+  }, []);
+
+  const openMenu = useCallback((key: string) => {
+    setMenuStates((prev) => ({ ...prev, [key]: true }));
+  }, []);
+
+  const closeMenu = useCallback((key: string) => {
+    setMenuStates((prev) => ({ ...prev, [key]: false }));
+  }, []);
 
   return (
     <HamburgerMenuContext.Provider
-      value={{ isOpen, toggleMenu, openMenu, closeMenu }}
+      value={{ getIsOpen, toggleMenu, openMenu, closeMenu }}
     >
       {children}
     </HamburgerMenuContext.Provider>
   );
 };
 
-export const useHamburgerMenu = () => {
+export const useHamburgerMenu = (key: string) => {
   const context = useContext(HamburgerMenuContext);
   if (!context)
     throw new Error(
       "useHamburgerMenu must be used within HamburgerMenuProvider"
     );
-  return context;
+
+  const { getIsOpen, toggleMenu, openMenu, closeMenu } = context;
+
+  return {
+    isOpen: getIsOpen(key),
+    toggleMenu: () => toggleMenu(key),
+    openMenu: () => openMenu(key),
+    closeMenu: () => closeMenu(key),
+  };
 };

@@ -51,3 +51,41 @@ export const fontFamilies: FontMeta[] = [
   { id: "04", name: "Cabin", variable: cabin.variable },
   { id: "05", name: "Lora", variable: lora.variable },
 ];
+
+export const Themes = {
+  elegant: {
+    bg: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    text: "#ffffff",
+    accent: "#f8f9fa",
+    border: "#ffffff20",
+  },
+  classic: {
+    bg: "linear-gradient(135deg, #2c3e50 0%, #34495e 100%)",
+    text: "#ecf0f1",
+    accent: "#3498db",
+    border: "#ffffff15",
+  },
+  warm: {
+    bg: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%)",
+    text: "#2c3e50",
+    accent: "#e74c3c",
+    border: "#00000010",
+  },
+  royal: {
+    bg: "linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)",
+    text: "#ffffff",
+    accent: "#ffd700",
+    border: "#ffffff25",
+  },
+} as const;
+
+// const localfont = localFont({
+//   src: [
+//     {
+//       path: '../../public/fonts/local-Regular.woff2',
+//       weight: '500',
+//       style: 'normal',
+//     },
+//   ],
+//   variable: '--font-local',
+// })

@@ -24,3 +24,19 @@ A Frontend Beginner Project
 <li> <i>Component Library:</i> <b><a target="_blank"href="https://ui.shadcn.com/">Shadcn UI</a></b></li>
 
 <li> <i>Animations:</i> <b><a target="_blank"href="https://www.framer.com/motion/">Framer Motion</a></b></li>
+
+<p>
+        configure shadcn ui
+</p>
+
+<p>
+
+        bun x --bun shadcn@latest init
+
+</p>
+
+<p>
+
+        bun x --bun shadcn@latest add
+
+</p>

@@ -7,13 +7,16 @@ const encodedOGUrl = encodeURI(
   `${frontendUrl}/api/og?title=Next.js Developer&subtitle=Elegant DX for Modern Web&author=@vivekcsein&theme=elegant`
 );
 
+//list your search engine keywords here
+const keywords =
+  "Next.js template, TypeScript, Tailwind CSS, Redux Toolkit, scalable React architecture, production-ready frontend, DX optimization, 2025 web development, @vivekcsein";
+
 const HomePageSEO: Metadata = {
   title:
     "Next.js Frontend Template | TypeScript, Tailwind, Redux - @vivekcsein",
   description:
     "Explore a scalable, production-ready Next.js frontend template built with TypeScript, Tailwind CSS, and Redux Toolkit. Designed for performance and developer experience.",
-  keywords:
-    "Next.js template, TypeScript, Tailwind CSS, Redux Toolkit, scalable React architecture, production-ready frontend, DX optimization, 2025 web development, @vivekcsein",
+  keywords: keywords,
   openGraph: {
     title:
       "Next.js Frontend Template | TypeScript, Tailwind, Redux - @vivekcsein",

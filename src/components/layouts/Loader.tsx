@@ -1,5 +1,5 @@
 import React from "react";
-import { WaveLoader } from "../ui/loader/WaveLoader";
+import { WaveLoader } from "../ui/loaders/WaveLoader";
 
 const Loader = () => {
   return (

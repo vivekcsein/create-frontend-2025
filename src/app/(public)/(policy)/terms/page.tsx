@@ -2,7 +2,7 @@ import React from "react";
 import PolicySection from "@/components/context/home/PolicySection";
 import { termsAndConditions } from "@/libs/data/data.policy";
 
-const Terms = () => {
+const TermsPage = () => {
   return (
     <>
       <PolicySection
@@ -15,4 +15,4 @@ const Terms = () => {
   );
 };
 
-export default Terms;
+export default TermsPage;

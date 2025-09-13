@@ -2,7 +2,7 @@ import React from "react";
 import { cookiePolicy } from "@/libs/data/data.policy";
 import PolicySection from "@/components/context/home/PolicySection";
 
-const Cookie = () => {
+const CookiePage = () => {
   return (
     <>
       <PolicySection
@@ -15,4 +15,4 @@ const Cookie = () => {
   );
 };
 
-export default Cookie;
+export default CookiePage;

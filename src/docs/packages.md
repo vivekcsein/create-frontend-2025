@@ -18,7 +18,7 @@ Initialize the node project, create package.json using this terminal command, an
 
 <p>
 
-    bun add dotenv next-themes axios gsap swiper zustand clsx framer-motion lucide-react zod styled-components
+    bun add next-themes axios gsap swiper zustand clsx framer-motion lucide-react zod styled-components
 
 </p>
 

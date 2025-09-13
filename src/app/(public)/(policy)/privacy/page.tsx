@@ -2,7 +2,7 @@ import React from "react";
 import { privacyPolicy } from "@/libs/data/data.policy";
 import PolicySection from "@/components/context/home/PolicySection";
 
-const Privacy = () => {
+const PrivacyPage = () => {
   return (
     <>
       <PolicySection
@@ -15,4 +15,4 @@ const Privacy = () => {
   );
 };
 
-export default Privacy;
+export default PrivacyPage;
